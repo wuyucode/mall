@@ -4,7 +4,7 @@
             <div>
                 <span>全部商品{{total}}</span>
             </div>
-            <div>
+            <div class="trans">
                 <span>配送至：</span>
                 <el-select v-model="address" placeholder="请选择">
                     <el-option
@@ -38,5 +38,9 @@
 </script>
 
 <style scoped>
-
+.trans{
+    position: absolute;
+    left:70%;
+    top:20%;
+}
 </style>

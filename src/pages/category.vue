@@ -168,12 +168,13 @@
     }
     .tag{
         font-size: 0.8em;
-        padding:3px;
+        padding:3px 2px;
+        color: cornflowerblue;
     }
     .title{
         background-color: gainsboro;
         font-size:1em;
-        padding:10px 5px 10px 5px;
+        padding:15px 15px 10px 10px;
     }
     .info{
         font-size:0.7em;
