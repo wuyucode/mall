@@ -3,7 +3,7 @@
         <el-row>
             <el-card>
                 <el-carousel :interval="4000" type="card" height="330px">
-                    <el-carousel-item v-for="item in imgList" :key="item">
+                    <el-carousel-item v-for="(item) in imgList" :key="item.index">
                         <el-tooltip class="item" effect="dark" :content="item.title" placement="top">
                             <el-image :src="item.url" ></el-image>
                         </el-tooltip>
