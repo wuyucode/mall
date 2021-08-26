@@ -54,7 +54,7 @@
             size="20%"
             :show-close="false">
             <div class="avator center">
-                <el-avatar  :size="70" :src="this.userInfo.avator"></el-avatar>
+                <el-avatar  :size="70" :src="this.userInfo.avatar"></el-avatar>
             </div>
             <div class="username center">
                 <span>{{this.userInfo.username}}</span>
