@@ -60,7 +60,7 @@
                 <span>{{this.userInfo.username}}</span>
             </div>
             <div class="main center">
-                <el-menu :default-active="userActiveIndex" class="" mode="vertical" @select="userDrawerMenu">
+                <el-menu :default-active="userActiveIndex" class="" mode="vertical" @select="userDrawerMenu" v-loading.fullscreen.lock="fullscreenLoading">
                     <el-menu-item index="1">个人资料</el-menu-item>
                     <el-menu-item index="2">我的订单</el-menu-item>
                     <el-menu-item index="3">我的购物车</el-menu-item>
@@ -192,8 +192,7 @@
                     case "3":break;
                     case "4":break;
                     case "5":break;
-                    case "6": this.$store.dispatch('logout')
-                              this.drawer = false
+                    case "6": this.logout()
                               ;break;
                 }
 
@@ -208,6 +207,17 @@
                     })
                 })
                 this.dialogVisible = false
+            },
+            logout(){
+                this.fullscreenLoading=true;
+                this.$store.dispatch('logout').then(()=>{
+                    this.fullscreenLoading=false;
+                    this.$message({
+                        message:'已退出登录',
+                        type:'success'
+                    })
+                })
+                this.drawer = false
             }
         },
         mounted() {
