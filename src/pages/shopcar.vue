@@ -20,7 +20,7 @@
 
             <el-row style="padding: 35px 0 0 25px">
                 <el-col :span="3"><el-checkbox v-model="allChecked">全选</el-checkbox></el-col>
-                <el-col :span="11"><span>商品</span></el-col>
+                <el-col :span="11"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;商品</span></el-col>
                 <el-col :span="3"><span>单价</span></el-col>
                 <el-col :span="3"><span>数量</span></el-col>
                 <el-col :span="2"><span>小计</span></el-col>
@@ -29,8 +29,8 @@
             <el-card shadow="none" v-for="(item,index) in shopCar" :key="index">
                 <el-row style="padding: 20px 0 0 0">
                     <el-col class="padding10" :span="1"><el-checkbox v-model="item.checked"></el-checkbox></el-col>
-                    <el-col class="padding10" :span="2"><el-image :src="item.imgUrl"></el-image></el-col>
-                    <el-col class="padding10" :span="11"><span>{{item.name}}</span></el-col>
+                    <el-col class="padding10" :span="3"><el-image :src="item.imgUrl"></el-image>&nbsp;</el-col>
+                    <el-col class="padding10" :span="10"><span>{{item.name}}</span></el-col>
                     <el-col class="padding10" :span="2"><span>&nbsp;&nbsp;{{item.unitPrice}}</span></el-col>
                     <el-col class="padding10" :span="4">&nbsp;&nbsp;<el-input-number v-model="item.count" :min="1" label="" size="mini"></el-input-number></el-col>
                     <el-col class="padding10" :span="2"><span>&nbsp;&nbsp;&nbsp;&nbsp;{{item.unitPrice*item.count}}</span></el-col>
@@ -45,7 +45,7 @@
                 <el-col class="padding10" :span="3"><el-button type="text">移入关注</el-button></el-col>
                 <el-col style="padding: 18px 0 0 0" :span="3"><span>已选{{totalChecked}}件商品</span></el-col>
                 <el-col style="padding: 18px 0 0 0" :span="4"><span>总价：￥{{totalPrice}}</span></el-col>
-                <el-col  :span="2"><el-button style="background-color: lightskyblue;box-shadow: 5px 5px 5px 0" @click="purchase" >结算</el-button></el-col>
+                <el-col  :span="2"><el-button style="background-color: lightsteelblue;box-shadow: 5px 5px 5px 0" @click="purchase" >结算</el-button></el-col>
             </el-row>
         </el-card>
 
@@ -152,6 +152,7 @@
         position: fixed;
         bottom:0;
         width: 74%;
+        background-color: azure;
     }
 
 </style>

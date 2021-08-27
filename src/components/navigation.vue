@@ -1,9 +1,9 @@
 <template>
     <div id="navigation">
-        <el-card>
-            <el-menu :default-active="activeIndex" class="el-menu-demo" mode="horizontal" @select="navigate">
+        <el-card >
+            <el-menu  :default-active="activeIndex" class="el-menu-demo" mode="horizontal" @select="navigate">
                 <el-col :span="2" style="padding: 1px 5px">
-                    <el-image src="https://img0.baidu.com/it/u=2173609813,2095459094&fm=26&fmt=auto&gp=0.jpg"></el-image>
+                    <el-image src="https://i.loli.net/2021/08/27/gi8M3QWq7CS2bvk.jpg"></el-image>
                 </el-col>
                 <el-menu-item index="1">首页</el-menu-item>
                 <el-menu-item index="2">全部分类</el-menu-item>
@@ -234,6 +234,9 @@
 
 }
 .main{
+
+}
+.el-menu-demo{
 
 }
 
