@@ -3,7 +3,7 @@
         <el-card ref="contents">
             <el-row>
                 <div >
-                    <span style="font-size: 1.3em;color: #409EFF">全部商品&nbsp;{{total}}</span>
+                    <span style="font-size: 1.3em;color: #409EFF">全部商品&nbsp;{{shopCar.length}}</span>
                 </div>
                 <div class="trans">
                     <span>配送至：</span>
