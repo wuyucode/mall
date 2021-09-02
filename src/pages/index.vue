@@ -8,12 +8,12 @@
 <script>
     export default {
         name: "index",
-        components:{
-            indexContent:()=>import('@/views/indexContent')
+        components: {
+            indexContent: () => import('@/views/indexContent')
         },
-        data(){
-            return{
-                activeIndex:'1'
+        data() {
+            return {
+                activeIndex: '1'
             }
         }
     }

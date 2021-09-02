@@ -12,6 +12,7 @@ export function validateURL(textval) {
     const urlregex = /^(https?|ftp):\/\/([a-zA-Z0-9.-]+(:[a-zA-Z0-9.&%$-]+)*@)*((25[0-5]|2[0-4][0-9]|1[0-9]{2}|[1-9][0-9]?)(\.(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[1-9]?[0-9])){3}|([a-zA-Z0-9-]+\.)*[a-zA-Z0-9-]+\.(com|edu|gov|int|mil|net|org|biz|arpa|info|name|pro|aero|coop|museum|[a-zA-Z]{2}))(:[0-9]+)*(\/($|[a-zA-Z0-9.,?'\\+&%$#=~_-]+))*$/
     return urlregex.test(textval)
 }
+
 /**
  * 邮箱
  * @param {*} s
@@ -61,8 +62,9 @@ export function validatAlphabets(str) {
     const reg = /^[A-Za-z]+$/
     return reg.test(str)
 }
+
 /*验证pad还是pc*/
-export const vaildatePc = function() {
+export const vaildatePc = function () {
     const userAgentInfo = navigator.userAgent;
     const Agents = ["Android", "iPhone",
         "SymbianOS", "Windows Phone",
@@ -77,6 +79,7 @@ export const vaildatePc = function() {
     }
     return flag;
 }
+
 /**
  * validate email
  * @param email
@@ -171,6 +174,7 @@ export function cardid(code) {
     list.push(msg);
     return list;
 }
+
 /**
  * 判断手机号码是否正确
  */
@@ -197,6 +201,7 @@ export function isvalidatemobile(phone) {
     list.push(msg);
     return list;
 }
+
 /**
  * 判断姓名是否正确
  */
@@ -205,6 +210,7 @@ export function validatename(name) {
     if (!regName.test(name)) return false;
     return true;
 }
+
 /**
  * 判断是否为整数
  */
@@ -218,6 +224,7 @@ export function validatenum(num, type) {
     }
     return true;
 }
+
 /**
  * 判断是否为小数
  */
@@ -231,6 +238,7 @@ export function validatenumord(num, type) {
     }
     return true;
 }
+
 /**
  * 判断是否为空
  */

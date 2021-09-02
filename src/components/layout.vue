@@ -8,13 +8,11 @@
 <script>
     export default {
         name: "layout",
-        components:{
-            navigation:()=>import('@/components/navigation')
+        components: {
+            navigation: () => import('@/components/navigation')
         },
-        data(){
-            return{
-
-            }
+        data() {
+            return {}
         }
     }
 </script>
