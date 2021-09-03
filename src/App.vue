@@ -101,4 +101,13 @@
     .pdd30{
         padding-bottom: 30px;
     }
+    .img_li{
+        list-style-type: none; float: left; padding: 5px; border: 2px solid #ffffff;
+    }
+    .img_li_checked{
+        border: 2px solid #F56C6C;
+    }
+    .img_li_not_checked{
+        border: 2px solid #ffffff
+    }
 </style>
