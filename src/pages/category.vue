@@ -165,7 +165,16 @@
                 this.categoryList[catIndex].checked = this.categoryList[catIndex].tagList[tagIndex];
             }
         },
-
+        mounted() {
+            this.axios.get(
+                '/api/categoryList'
+            ).then((res)=>{
+                let data=res.data.data
+                this.categoryList=data
+            }).catch((err)=>{
+                this.$message.error(err)
+            })
+        }
     }
 </script>
 
